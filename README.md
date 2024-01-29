@@ -26,6 +26,10 @@ Git
 - When you exit your tasks are saved into tasks.txt
 
 
+## How to contribute
+
+You can add functionalities of fix issues by cloning the repository and making a pull request with your modifications.
+
 
 
 
