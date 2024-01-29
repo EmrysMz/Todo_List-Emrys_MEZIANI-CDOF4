@@ -21,13 +21,13 @@ def view_tasks(tasks):
         print("No tasks found.")
     else:
         print("Tasks:")
-        for index, task in enumerate(tasks):
+        for index, task in enumerate(tasks, start=1):
             print(f"{index}. {task}")
 
 # Function to mark a task as completed
 def mark_completed(tasks):
     view_tasks(tasks)
-    task_index = int(input("Enter task number to mark as completed: ")) #Modification
+    task_index = int(input("Enter task number to mark as completed: ")) -1
     if task_index >= 0 and task_index < len(tasks):
         tasks[task_index] = f"[Completed] {tasks[task_index]}"
         print("Task marked as completed!")
@@ -37,7 +37,7 @@ def mark_completed(tasks):
 # Function to delete a task from the list
 def delete_task(tasks):
     view_tasks(tasks)
-    task_index = int(input("Enter task number to delete: ")) #Modification
+    task_index = int(input("Enter task number to delete: ")) -1
     if task_index >= 0 and task_index < len(tasks):
         deleted_task = tasks.pop(task_index)
         print(f"Task '{deleted_task}' deleted successfully!")
