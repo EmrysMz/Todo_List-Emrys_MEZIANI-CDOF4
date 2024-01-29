@@ -22,7 +22,7 @@ def view_tasks(tasks):
     else:
         print("Tasks:")
         for index, task in enumerate(tasks):
-            print(f"{index+1}. {task}")
+            print(f"{index}. {task}")
 
 # Function to mark a task as completed
 def mark_completed(tasks):
